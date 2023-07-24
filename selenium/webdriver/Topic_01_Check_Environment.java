@@ -1,4 +1,4 @@
-package webdriver;
+package selenium.webdriver;
 
 import java.util.concurrent.TimeUnit;
 
