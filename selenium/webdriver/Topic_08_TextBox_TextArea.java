@@ -133,7 +133,7 @@ public class Topic_08_TextBox_TextArea {
 
     @AfterClass
     public void afterClass() {
-        //driver.quit();
+        driver.quit();
     }
 
     public void sleepInSecond (long timeInSecond){
