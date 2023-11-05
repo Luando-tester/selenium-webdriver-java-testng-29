@@ -134,6 +134,32 @@ public class Topic_12_Checkbox_Radio {
 
         Assert.assertTrue(driver.findElement(registerRadio).isSelected());
     }
+    @Test
+    public void TC_06_Login() {
+        driver.get("https://docs.google.com/forms/d/e/1FAIpQLSfiypnd69zhuDkjKgqvpID9kwO29UCzeCVrGGtbNPZXQok0jA/viewform");
+        By canthoRadio = By.xpath("//div[@aria-label='Cần Thơ']");
+        By quangNamCheckbox =  By.xpath("//div[@aria-label='Quảng Nam']");
+        By quangBinhCheckbox = By.xpath(("//div[@aria-label='Quảng Bình']"));
+
+
+        Assert.assertEquals(driver.findElement(canthoRadio).getAttribute("aria-checked"),"false");
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@aria-label='Cần Thơ' and @aria-checked='false']")).isDisplayed());
+
+        driver.findElement(canthoRadio).click();
+        sleepInSecond(2);
+
+        Assert.assertEquals(driver.findElement(canthoRadio).getAttribute("aria-checked"),"true");
+        Assert.assertTrue(driver.findElement(By.xpath("//div[@aria-label='Cần Thơ' and @aria-checked='true']")).isDisplayed());
+
+        driver.findElement(quangNamCheckbox).click();
+        driver.findElement(quangBinhCheckbox).click();
+        sleepInSecond(2);
+
+        Assert.assertEquals(driver.findElement(quangNamCheckbox).getAttribute("aria-checked"),"true");
+        Assert.assertEquals(driver.findElement(quangBinhCheckbox).getAttribute("aria-checked"),"true");
+
+    }
+
 
 
 
