@@ -95,8 +95,8 @@ public class Topic_13_Accept_Alert {
 
         devTools.send(Network.enable(Optional.empty(),Optional.empty(),Optional.empty()));
         Map<String , Object> headers = new HashMap<String, Object>();
-        String basicAuthen = "Basic" + new String(new Base64().encode(String.format("%s:%s",username,password).getBytes()));
-        headers.put("Authorization", basicAuthen);
+//        String basicAuthen = "Basic" + new String(new Base64().encode(String.format("%s:%s",username,password).getBytes()));
+//        headers.put("Authorization", basicAuthen);
 
         devTools.send(Network.setExtraHTTPHeaders(new Headers(headers)));
         driver.get("https://the-internet.herokuapp.com/basic-auth");
