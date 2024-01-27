@@ -104,7 +104,7 @@ public class Topic_20_JavascriptExecutor {
 
     @AfterClass
     public void afterClass() {
-        //driver.quit();
+        driver.quit();
     }
 
     public void sleepInSecond (long timeInSecond){

@@ -167,7 +167,7 @@ public class Topic_19_Window_Tab {
 
     @AfterClass
     public void afterClass() {
-        //driver.quit();
+        driver.quit();
     }
 
     public void sleepInSecond (long timeInSecond){
