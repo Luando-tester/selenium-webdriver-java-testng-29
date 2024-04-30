@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Selenium WebDriver" verbose="1">
+    <test name="Run on FireFox browser">
+        <parameter name="browser" value="firefox">
+            <classes>
+                <class name="selenium.testng.Topic_09_Parameter"/>
+            </classes>
+        </parameter>
+    </test>
+
+    <test name="Run on FireFox browser1">
+        <parameter name="browser" value="firefox">
+            <classes>
+                <class name="selenium.testng.Topic_09_Parameter"/>
+            </classes>
+        </parameter>
+    </test>
+</suite>
